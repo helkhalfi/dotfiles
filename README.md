@@ -1,6 +1,7 @@
 # helkhalfi's dotfiles
 
 ![CI](https://github.com/helkhalfi/dotfiles/workflows/CI/badge.svg)
+![GitGuardian scan](https://github.com/helkhalfi/dotfiles/workflows/GitGuardian%20scan/badge.svg)
 
 ## Super Duper Inpiration
 
