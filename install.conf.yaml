@@ -1,0 +1,71 @@
+- clean: ['~']
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+# HomeBrew Section
+- shell:
+  - [/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)", Installing Homebrew]
+  - [brew bundle install --no-upgrade --file Brewfile, Installing packages using Homebrew]
+
+# antigen Section
+- shell:
+  - [mkdir -p $HOME/.antigen, Create antigen folder]
+  - [curl -L git.io/antigen > $HOME/.antigen/antigen.zsh, Installing antigen]
+
+
+- link:
+    # Terminal:
+    ~/.shell:
+      path: shell
+      create: true
+    ~/.shell_env: config/shell_env
+    ~/.bash_profile:
+      force: true
+      path: config/bash_profile
+    ~/.bashrc:
+      force: true
+      path: config/bashrc
+    ~/.zshrc:
+      force: true
+      path: config/zshrc
+    ~/.hushlogin: config/hushlogin
+    ~/.antigen/antigenrc:
+      path: config/antigen.txt
+    ~/.tmux.conf: config/tmux.conf
+
+    # Git:
+    ~/.gitconfig:
+      force: true
+      path: config/gitconfig
+    ~/.gitignore_global: config/gitignore
+    ~/.gitattributes_global: config/gitattributes
+
+    # Editors:
+    ~/.editorconfig: config/editorconfig
+    ~/.nanorc: config/nanorc
+    ~/.vimrc: config/vimrc
+
+
+# Setting up vscode:
+- link:
+    # vscode:
+    "~/Library/Application Support/Code/User/settings.json":
+        path: vscode/settings.json
+        create: true
+    "~/Library/Application Support/Code/User/keybindings.json":
+        path: vscode/keybindings.json
+        create: true
+
+# - shell:git
+#   - [bash ./vscode/install.sh, Installing vscode extensions]
+
+
+# # Configure Poetry
+# - shell:
+#   - [mkdir -p $ZSH/plugins/poetry, Create zsh poetry plugin directory]
+#   - [poetry completions zsh > $ZSH/plugins/poetry/_poetry, install poetry completions]
+
+# Cleaning up:
+- shell:
+  - [brew cleanup, Cleaning up]
