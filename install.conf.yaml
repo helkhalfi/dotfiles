@@ -25,6 +25,7 @@
       path: config/bash_profile
     ~/.bashrc:
       #force: true
+            relink: true
       path: config/bashrc
     ~/.zshrc:
       #force: true
