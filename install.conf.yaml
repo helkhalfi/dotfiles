@@ -21,21 +21,21 @@
       create: true
     ~/.shell_env: config/shell_env
     ~/.bash_profile:
-      #force: true
+      force: true
       path: config/bash_profile
     ~/.bashrc:
-      #force: true
+      force: true
       relink: true
       path: config/bashrc
     ~/.zshrc:
-      #force: true
+      force: true
       path: config/zshrc
     ~/.hushlogin: config/hushlogin
     ~/.antigen/antigenrc:
       path: config/antigen.txt
     ~/.tmux.conf: config/tmux.conf
     ~/.alacritty.yml: 
-      #force: true
+      force: true
       path: config/alacritty.yml
 
     # Git:
