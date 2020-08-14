@@ -33,6 +33,9 @@
     ~/.antigen/antigenrc:
       path: config/antigen.txt
     ~/.tmux.conf: config/tmux.conf
+    ~/.alacritty.yml: 
+      force: true
+      path: config/alacritty.yml
 
     # Git:
     ~/.gitconfig:
