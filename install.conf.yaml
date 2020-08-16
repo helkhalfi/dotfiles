@@ -49,6 +49,14 @@
     ~/.nanorc: config/nanorc
     ~/.vimrc: config/vimrc
 
+    # Oh-My-Tmux
+    ~/.tmux/.tmux.conf:
+      force: true
+      path: .tmux/.tmux.conf
+    ~/.tmux/.tmux.conf.local:
+      force: false 
+      path: config/.tmux.conf.local
+        
 
 # Setting up vscode:
 - link:
