@@ -6,7 +6,7 @@
 
 # === Plugin management ===
 
-source "$HOME/.zsh-plugins"
+#source "$HOME/.zsh-plugins"
 
 
 # === Shell parts ===

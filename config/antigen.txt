@@ -1,7 +1,7 @@
 source "$HOME/.antigen/antigen.zsh"
 
 # Load the oh-my-zsh's library.
-#antigen use oh-my-zsh
+antigen use oh-my-zsh
 
 # Sorted in order of appearance (new at the bottom):
 antigen bundle git
@@ -17,7 +17,8 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle MichaelAquilina/zsh-auto-notify
 
 # Theme, should be the last:
-#antigen theme robbyrussell
+antigen theme robbyrussell
+
 #antigen theme candy
 
 
