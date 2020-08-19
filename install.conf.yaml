@@ -19,7 +19,8 @@
     ~/.shell:
       path: shell
       create: true
-    ~/.shell_env: config/shell_env
+    ~/.shell_env:
+       path: config/shell_env
     ~/.bash_profile:
       force: true
       path: config/bash_profile
@@ -30,9 +31,12 @@
       force: true
       path: config/zshrc
     ~/.hushlogin: config/hushlogin
+   
+    # Antigen: zsh plugin and theme manager
     ~/.antigen/antigenrc:
       path: config/antigen.txt
-    ~/.tmux.conf: config/tmux.conf
+    
+    # Alactitty
     ~/.alacritty.yml: 
       force: true
       path: config/alacritty.yml
