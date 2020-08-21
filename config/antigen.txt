@@ -14,12 +14,10 @@ antigen bundle pyenv
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
+antigen bundle history-substring-search
 antigen bundle MichaelAquilina/zsh-auto-notify
 
 # Theme, should be the last:
-antigen theme robbyrussell
-
-#antigen theme candy
-
+antigen theme bira
 
 antigen apply
