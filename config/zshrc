@@ -21,6 +21,7 @@ HIST_IGNORE_SPACE="true"
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
+
 # Custom envs:
 source "$ZSH/oh-my-zsh.sh"
 source "$HOME/.shell_env"
