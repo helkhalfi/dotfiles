@@ -1,5 +1,13 @@
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+#!/bin/zsh
+# uncomment this and the last line for zprof info
+zmodload zsh/zprof
+
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
+
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="false"
@@ -23,6 +31,13 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 
 # Custom envs:
-source "$ZSH/oh-my-zsh.sh"
 source "$HOME/.shell_env"
-source "$HOME/.antigen/antigenrc"
+
+# ZSH Plugin and Theme manager
+#source <(antibody init)
+#antibody bundle < ~/.zsh_plugins.txt
+
+antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+source ~/.zsh_plugins.sh
+
+zprof
