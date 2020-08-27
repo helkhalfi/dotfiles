@@ -15,6 +15,6 @@ zsh-users/zsh-history-substring-search
 
 MichaelAquilina/zsh-auto-notify
 
-# Theme, should be the last:
-ohmyzsh/ohmyzsh path:themes/bira.zsh-theme
+# Theme
+ohmyzsh/ohmyzsh path:themes/agnoster.zsh-theme
 
