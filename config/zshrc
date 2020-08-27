@@ -45,5 +45,3 @@ source ~/.zsh_plugins.sh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-# Poetry completions
-poetry completions zsh > $ZSH/plugins/poetry/_poetry
