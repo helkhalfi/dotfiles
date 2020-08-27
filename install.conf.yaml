@@ -1,5 +1,11 @@
 - clean: ['~']
 
+- create:
+  - ~/.vim/backups
+  - ~/.vim/undo
+  - ~/.vim/swaps
+  - $ZSH/plugins/poetry
+
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
 
@@ -7,11 +13,6 @@
 - shell:
   - [/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)", Installing Homebrew]
   - [brew bundle install --no-upgrade --file Brewfile, Installing packages using Homebrew]
-
-# antigen Section
-- shell:
-  - [mkdir -p $HOME/.antigen, Create antigen folder]
-  - [curl -L git.io/antigen > $HOME/.antigen/antigen.zsh, Installing antigen]
 
 
 - link:
@@ -31,13 +32,13 @@
       force: true
       path: config/zshrc
     ~/.hushlogin: config/hushlogin
-   
-    # Antigen: zsh plugin and theme manager
-    ~/.antigen/antigenrc:
-      path: config/antigen.txt
-    
+
+    # Antibody: zsh plugin and theme manager
+    ~/.zsh_plugins.txt:
+      path: config/antibody.txt
+
     # Alactitty
-    ~/.alacritty.yml: 
+    ~/.alacritty.yml:
       force: true
       path: config/alacritty.yml
 
@@ -59,7 +60,7 @@
       path: .tmux/.tmux.conf
     ~/.tmux.conf.local:
       path: config/.tmux.conf.local
-        
+
 
 # Setting up vscode:
 - link:
@@ -73,12 +74,6 @@
 
 # - shell:git
 #   - [bash ./vscode/install.sh, Installing vscode extensions]
-
-
-# # Configure Poetry
-# - shell:
-#   - [mkdir -p $ZSH/plugins/poetry, Create zsh poetry plugin directory]
-#   - [poetry completions zsh > $ZSH/plugins/poetry/_poetry, install poetry completions]
 
 # Cleaning up:
 - shell:
