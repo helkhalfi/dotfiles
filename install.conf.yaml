@@ -65,10 +65,10 @@
 # Setting up vscode:
 - link:
     # vscode:
-    "~/Library/Application Support/Code/User/settings.json":
+    "~/Library/Application Support/VSCodium/User/settings.json":
         path: vscode/settings.json
         create: true
-    "~/Library/Application Support/Code/User/keybindings.json":
+    "~/Library/Application Support/VSCodium/User/keybindings.json":
         path: vscode/keybindings.json
         create: true
 
