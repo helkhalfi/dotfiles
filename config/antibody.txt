@@ -5,7 +5,6 @@ ohmyzsh/ohmyzsh path:plugins/git
 ohmyzsh/ohmyzsh path:plugins/python
 ohmyzsh/ohmyzsh path:plugins/osx
 ohmyzsh/ohmyzsh path:plugins/extract
-ohmyzsh/ohmyzsh path:plugins/pyenv
 
 # Syntax highlighting bundle.
 zsh-users/zsh-syntax-highlighting
@@ -16,5 +15,4 @@ zsh-users/zsh-history-substring-search
 MichaelAquilina/zsh-auto-notify
 
 # Theme
-ohmyzsh/ohmyzsh path:themes/agnoster.zsh-theme
-
+helkhalfi/dotfiles path:config/my-agnoster.zsh-theme branch:main
