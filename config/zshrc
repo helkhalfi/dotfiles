@@ -45,3 +45,5 @@ source ~/.zsh_plugins.sh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+# Fuck plugin :)
+eval $(thefuck --alias)
