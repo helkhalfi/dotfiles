@@ -61,7 +61,7 @@
   "window.zoomLevel": 0,
 
   // Theme:
-  "workbench.colorTheme": "Ayu Dark",
+  "workbench.colorTheme": "Atom One Dark",
   "workbench.iconTheme": "ayu",
 
   "window.menuBarVisibility": "hidden",
