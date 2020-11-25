@@ -79,3 +79,9 @@
 # Cleaning up:
 - shell:
   - [brew cleanup, Cleaning up]
+
+  # Giving a name to the machine :-)
+- shell:
+  - [sudo scutil --set ComputerName "eshyma", Setting ComputerName]
+  - [sudo scutil --set LocalHostName "eshyma", Setting LocalHostName]
+  - [sudo scutil --set HostName "eshyma", Setting HostName]
