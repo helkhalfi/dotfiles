@@ -4,6 +4,7 @@
   - ~/.vim/backups
   - ~/.vim/undo
   - ~/.vim/swaps
+  - ~/.nano-backups
   - $ZSH/plugins/poetry
 
 - shell:
