@@ -11,7 +11,6 @@
 # see: `brew info openssl` for more information.
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
-export CFLAGS="-I$(xcrun --show-sdk-path)/usr/include"
 export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 
 
@@ -28,24 +27,13 @@ PATH="$HOME/.local/bin:$PATH"
 # Adds `poetry` binary, should be added to the end:
 PATH="$PATH:$HOME/.poetry/bin"
 
-
-# npm:
-PATH="/usr/local/share/npm/bin:$PATH"
-
-# python2 (required by npm and other tools, installed via pyenv):
-PATH="$PATH:$HOME/.pyenv/versions/2.7.17/bin"
-
 export PATH
 
 
 # === General ===
 
 # Editor:
-export EDITOR=$(which nano)
-
-# GPG:
-export GPG_TTY=$(tty)
-eval "$(gpg-agent --daemon --allow-preset-passphrase > /dev/null 2>&1)"
+export EDITOR=$(which vim)
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8'
@@ -79,17 +67,6 @@ fi
 if command -v pyenv virtualenv-init 1>/dev/null 2>&1; then
   eval "$(pyenv virtualenv-init -)"
 fi
-
-
-# === Histories ===
-
-# Enable persistent REPL history for `node`.
-export NODE_REPL_HISTORY="$HOME/.node_history"
-# Use sloppy mode by default, matching web browsers.
-export NODE_REPL_MODE='sloppy'
-
-# Erlang and Elixir shell history:
-export ERL_AFLAGS="-kernel shell_history enabled"
 
 
 # === Code highlight ===
