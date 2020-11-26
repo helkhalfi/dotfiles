@@ -15,7 +15,6 @@
   - [/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)", Installing Homebrew]
   - [brew bundle install --no-upgrade --file Brewfile, Installing packages using Homebrew]
 
-
 - link:
     # Terminal:
     ~/.shell:
@@ -82,6 +81,8 @@
 
   # Giving a name to the machine :-)
 - shell:
-  - [sudo scutil --set ComputerName "eshyma", Setting ComputerName]
-  - [sudo scutil --set LocalHostName "eshyma", Setting LocalHostName]
-  - [sudo scutil --set HostName "eshyma", Setting HostName]
+  - [export INSTALL_HOST_NAME="eshyma-$RANDOM", Generate computer name]
+  - [sudo scutil --set ComputerName "$INSTALL_HOST_NAME", Setting ComputerName]
+  - [sudo scutil --set LocalHostName "$INSTALL_HOST_NAME", Setting LocalHostName]
+  - [sudo scutil --set HostName "$INSTALL_HOST_NAME", Setting HostName]
+  - [unset INSTALL_HOST_NAME, Clean up variable]
