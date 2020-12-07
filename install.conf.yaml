@@ -14,7 +14,8 @@
 - shell:
   - [/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)", Installing Homebrew]
   - [brew bundle install --no-upgrade --file Brewfile, Installing packages using Homebrew]
-
+#  - [brew cleanup] - enabling this when "https://github.com/actions/virtual-environments/issues/1811#issuecomment-732226001" is fixed
+ 
 - link:
     # Terminal:
     ~/.shell:
@@ -49,7 +50,7 @@
     ~/.gitignore_global: config/gitignore
     ~/.gitattributes_global: config/gitattributes
 
-    # Editors:
+    # Editors:7
     ~/.editorconfig: config/editorconfig
     ~/.nanorc: config/nanorc
     ~/.vimrc: config/vimrc
@@ -75,11 +76,7 @@
 # - shell:git
 #   - [bash ./vscode/install.sh, Installing vscode extensions]
 
-# Cleaning up:
-- shell:
-  - [brew cleanup, Cleaning up]
-
-  # Giving a name to the machine :-)
+ # Giving a name to the machine :-)
 - shell:
   - [export INSTALL_HOST_NAME="eshyma-$RANDOM", Generate computer name]
   - [sudo scutil --set ComputerName "$INSTALL_HOST_NAME", Setting ComputerName]
