@@ -75,11 +75,7 @@
 # - shell:git
 #   - [bash ./vscode/install.sh, Installing vscode extensions]
 
-# Cleaning up:
-- shell:
-  - [brew cleanup, Cleaning up]
-
-  # Giving a name to the machine :-)
+ # Giving a name to the machine :-)
 - shell:
   - [export INSTALL_HOST_NAME="eshyma-$RANDOM", Generate computer name]
   - [sudo scutil --set ComputerName "$INSTALL_HOST_NAME", Setting ComputerName]
