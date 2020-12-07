@@ -6,7 +6,7 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [ 'macos-11.0']
+        os: [ 'macos-11.0', 'macos-latest']
 
     runs-on: ${{ matrix.os }}
 
