@@ -46,8 +46,12 @@ set number
 syntax on
 " Highlight current line
 set cursorline
-" Make tabs as wide as two spaces
+" Make tabs as wide as 2 spaces
 set tabstop=2
+" Make the number of space characters inserted for indentation
+set shiftwidth=2
+" To insert space characters whenever the tab key is pressed 
+set expandtab
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list

@@ -85,4 +85,4 @@
   - [unset INSTALL_HOST_NAME, Clean up variable]
 
 - shell:
-  - [pyenv install 3.8.6, install python 3.8.6 - to validate flags]
+  - [pyenv install 3.9.0]
