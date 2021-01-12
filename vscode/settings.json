@@ -33,7 +33,7 @@
     ".eslintrc": "jsonc",
     "*.pyi": "python"
   },
-  "files.autoSave": "onFocusChange",
+  "files.autoSave": "afterDelay",
   "files.exclude": {
     "**/.DS_Store": true,
     "**/__pycache__": true,
@@ -98,5 +98,6 @@
     "sideBarTitle.foreground": "#0a0e14"
   },
   "javascript.updateImportsOnFileMove.enabled": "never",
+  "files.autoSaveDelay": 50,
 
 }

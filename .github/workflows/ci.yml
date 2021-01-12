@@ -13,6 +13,15 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: cleaning aws install
+      run: |
+         # https://github.com/helkhalfi/dotfiles/runs/1691237811#step:3:2964
+         rm -rf '/usr/local/bin/aws'
+         rm -rf '/usr/local/bin/aws_completer'
+         rm -rf '/usr/local/bin/2to3'
+
     - name: Run Installer
       run: |
+        # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+        # brew bundle install --no-upgrade --file Brewfile
         ./install

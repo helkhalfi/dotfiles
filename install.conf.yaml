@@ -73,9 +73,6 @@
         path: vscode/keybindings.json
         create: true
 
-# - shell:git
-#   - [bash ./vscode/install.sh, Installing vscode extensions]
-
  # Giving a name to the machine :-)
 - shell:
   - [export INSTALL_HOST_NAME="eshyma-$RANDOM", Generate computer name]
