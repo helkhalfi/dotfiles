@@ -13,6 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: cleaning
+      run: |
+         # https://github.com/helkhalfi/dotfiles/runs/1691237811#step:3:2964
+         rm -rf rm '/usr/local/bin/aws'
+
     - name: Run Installer
       run: |
          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
