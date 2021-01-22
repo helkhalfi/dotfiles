@@ -53,9 +53,7 @@ esac
   # what font the user is viewing this source code in. Do not replace the
   # escape sequence with a single literal character.
   # Do not change this! Do not make it '\u2b80'; that is the old, wrong code point.
-  #SEGMENT_SEPARATOR=$'\ue0b0'
-  SEGMENT_SEPARATOR='>'
-
+  SEGMENT_SEPARATOR=$'\ue0b0'
 }
 
 # Begin a segment
@@ -133,7 +131,7 @@ prompt_git() {
     zstyle ':vcs_info:*' get-revision true
     zstyle ':vcs_info:*' check-for-changes true
     zstyle ':vcs_info:*' stagedstr '✚'
-    zstyle ':vcs_info:*' unstagedstr '●'
+    zstyle ':vcs_info:*' unstagedstr '±'
     zstyle ':vcs_info:*' formats ' %u%c'
     zstyle ':vcs_info:*' actionformats ' %u%c'
     vcs_info
@@ -209,6 +207,14 @@ prompt_dir() {
   prompt_segment blue $CURRENT_FG '%~'
 }
 
+# Virtualenv: current working virtualenv
+prompt_virtualenv() {
+  local virtualenv_path="$VIRTUAL_ENV"
+  if [[ -n $virtualenv_path && -n $VIRTUAL_ENV_DISABLE_PROMPT ]]; then
+    prompt_segment blue black "(`basename $virtualenv_path`)"
+  fi
+}
+
 # Status:
 # - was there an error
 # - am I root
@@ -229,27 +235,18 @@ prompt_status() {
 #   ends in '-prod'
 # - displays black on green otherwise
 prompt_aws() {
-  [[ -z "$AWS_PROFILE" ]] && return
+  [[ -z "$AWS_PROFILE" || "$SHOW_AWS_PROMPT" = false ]] && return
   case "$AWS_PROFILE" in
     *-prod|*production*) prompt_segment red yellow  "AWS: $AWS_PROFILE" ;;
     *) prompt_segment green black "AWS: $AWS_PROFILE" ;;
   esac
 }
 
-
-# Pyenv: current working pyenv
-prompt_pyenv() {
-  local virtualenv_path="$PYENV_VERSION"
-  if [[ -n $virtualenv_path ]]; then
-    prompt_segment blue black "(`basename $virtualenv_path`)"
-  fi
-}
-
 ## Main prompt
 build_prompt() {
   RETVAL=$?
   prompt_status
-  prompt_pyenv
+  prompt_virtualenv
   prompt_aws
   prompt_context
   prompt_dir
@@ -260,3 +257,4 @@ build_prompt() {
 }
 
 PROMPT='%{%f%b%k%}$(build_prompt) '
+
