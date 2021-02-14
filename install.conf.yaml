@@ -83,3 +83,9 @@
 
 - shell:
   - [pyenv install 3.9.0]
+
+# Powerline Font Installation
+- shell:
+  - [git clone https://github.com/powerline/fonts.git --depth=1, cloning powerline fonts]
+  - [cd fonts && ./install.sh, install powerline fonts]
+  - [cd .. && rm -rf fonts, clean fonts install folder]
