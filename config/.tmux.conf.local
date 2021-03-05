@@ -293,4 +293,4 @@ set -g mouse on
 # bind C-a send-prefix
 
 # move status line to top
-#set -g status-position top
+set -g status-position top
