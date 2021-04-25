@@ -28,9 +28,7 @@ HIST_STAMPS="dd.mm.yyyy"
 HIST_IGNORE_SPACE="true"
 
 # User configuration
-
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-
 
 # Custom envs:
 source "$HOME/.shell_env"
@@ -53,5 +51,6 @@ eval $(thefuck --alias)
 # rbenv
 eval "$(rbenv init -)"
 
-# Ruby Gem
+# Ruby
 export PATH="~/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/bin":$PATH
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
