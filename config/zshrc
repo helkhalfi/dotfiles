@@ -54,3 +54,9 @@ eval "$(rbenv init -)"
 # Ruby
 export PATH="~/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/bin":$PATH
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
+# Building cryptographie
+# https://cryptography.io/en/latest/installation/#building-cryptography-on-macos
+export LDFLAGS="-L$(brew --prefix openssl@1.1)/lib" 
+export CFLAGS="-I$(brew --prefix openssl@1.1)/include"
+
