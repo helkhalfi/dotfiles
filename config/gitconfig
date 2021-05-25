@@ -2,6 +2,7 @@
   excludesfile = ~/.gitignore_global
   attributesFile = ~/.gitattributes_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
+	symlinks = false
 [pager]
   diff = "diff-so-fancy | less --tabs=1,5 -RFXM"
   show = "diff-so-fancy | less --tabs=1,5 -RFXM"
