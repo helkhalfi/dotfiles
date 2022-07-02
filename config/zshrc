@@ -29,7 +29,7 @@ HIST_IGNORE_SPACE="true"
 
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-
+export PATH=$PATH:"/opt/homebrew/bin"
 # Custom envs:
 source "$HOME/.shell_env"
 

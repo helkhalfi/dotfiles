@@ -12,7 +12,7 @@
 
 # HomeBrew Section
 - shell:
-  - [/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)", Installing Homebrew]
+  - [/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)", Installing Homebrew]
   - [brew bundle install --no-upgrade --file Brewfile, Installing packages using Homebrew]
 #  - [brew cleanup] - enabling this when "https://github.com/actions/virtual-environments/issues/1811#issuecomment-732226001" is fixed
  
