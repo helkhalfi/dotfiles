@@ -5,17 +5,16 @@
   - ~/.vim/undo
   - ~/.vim/swaps
   - ~/.nano-backups
-  - $ZSH/plugins/poetry
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
 
 # HomeBrew Section
 - shell:
-  - [/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)", Installing Homebrew]
-  - [brew bundle install --no-upgrade --file Brewfile, Installing packages using Homebrew]
-#  - [brew cleanup] - enabling this when "https://github.com/actions/virtual-environments/issues/1811#issuecomment-732226001" is fixed
- 
+#  - [/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)", Installing Homebrew]
+#  - [brew bundle install --no-upgrade --file Brewfile, Installing packages using Homebrew]
+  - [brew cleanup]
+
 - link:
     # Terminal:
     ~/.shell:
@@ -33,10 +32,9 @@
       force: true
       path: config/zshrc
     ~/.hushlogin: config/hushlogin
-
-    # Antibody: zsh plugin and theme manager
     ~/.zsh_plugins.txt:
-      path: config/antibody.txt
+      force: true
+      path: config/zsh_plugins.txt
 
     # Alactitty
     ~/.alacritty.yml:
@@ -80,9 +78,6 @@
   - [sudo scutil --set LocalHostName "$INSTALL_HOST_NAME", Setting LocalHostName]
   - [sudo scutil --set HostName "$INSTALL_HOST_NAME", Setting HostName]
   - [unset INSTALL_HOST_NAME, Clean up variable]
-
-- shell:
-  - [pyenv install 3.9.0]
 
 # Powerline Font Installation
 - shell:

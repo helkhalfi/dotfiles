@@ -12,6 +12,7 @@ indent_size = 2
 
 [*.py]
 indent_size = 4
+indent_style = space
 
 [*.{md,rst,in}]
 indent_style = ignore

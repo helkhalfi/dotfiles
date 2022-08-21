@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# `.eval` is used to provide custom variables.
+#
+# This file is used as a part of `.shell_env`
+
+eval "$(pyenv init --path)"
+# Enable shims and autocompletion
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+if command -v pyenv virtualenv-init 1>/dev/null 2>&1; then
+  eval "$(pyenv virtualenv-init -)"
+fi
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
