@@ -8,14 +8,14 @@ ohmyzsh/ohmyzsh path:plugins/extract
 ohmyzsh/ohmyzsh path:plugins/github
 ohmyzsh/ohmyzsh path:plugins/emoji
 
-
-# Syntax highlighting bundle.
-zsh-users/zsh-syntax-highlighting
-zsh-users/zsh-autosuggestions
-zsh-users/zsh-completions
-zsh-users/zsh-history-substring-search
-
+# Autoni
 MichaelAquilina/zsh-auto-notify
 
 # Theme
 agnoster/agnoster-zsh-theme
+
+# Syntax highlighting bundle.
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
+zsh-users/zsh-history-substring-search
+zsh-users/zsh-syntax-highlighting
