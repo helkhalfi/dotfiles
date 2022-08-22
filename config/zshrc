@@ -91,4 +91,4 @@ source $static_file
 unset antidote_dir plugins_file static_file
 
 # show kubernetes context
-RPS1='$(kubectx_prompt_info)'
+RPS1='k8s:$(kubectx_prompt_info)'
