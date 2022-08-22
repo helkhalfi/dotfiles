@@ -64,7 +64,6 @@ export CFLAGS="-I$(brew --prefix openssl@1.1)/include"
 #antidote bundle <~/.zsh_plugins.txt >~/.zsh_plugins.zsh
 #source ~/.zsh_plugins.zsh
 
-
 # You can change the names/locations of these if you prefer.
 antidote_dir=${ZDOTDIR:-~}/.antidote
 plugins_txt=${ZDOTDIR:-~}/.zsh_plugins.txt
@@ -90,3 +89,6 @@ source $static_file
 
 # cleanup
 unset antidote_dir plugins_file static_file
+
+# show kubernetes context
+RPS1='$(kubectx_prompt_info)'
