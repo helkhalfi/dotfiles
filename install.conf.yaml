@@ -11,8 +11,8 @@
 
 # HomeBrew Section
 - shell:
-#  - [/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)", Installing Homebrew]
-#  - [brew bundle install --no-upgrade --file Brewfile, Installing packages using Homebrew]
+  - [/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)", Installing Homebrew]
+  - [brew bundle install --no-upgrade --file Brewfile, Installing packages using Homebrew]
   - [brew cleanup]
 
 - link:
