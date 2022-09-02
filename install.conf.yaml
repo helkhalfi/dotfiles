@@ -72,12 +72,12 @@
         create: true
 
  # Giving a name to the machine :-)
-- shell:
-  - [export INSTALL_HOST_NAME="eshyma-$RANDOM", Generate computer name]
-  - [sudo scutil --set ComputerName "$INSTALL_HOST_NAME", Setting ComputerName]
-  - [sudo scutil --set LocalHostName "$INSTALL_HOST_NAME", Setting LocalHostName]
-  - [sudo scutil --set HostName "$INSTALL_HOST_NAME", Setting HostName]
-  - [unset INSTALL_HOST_NAME, Clean up variable]
+#- shell:
+#  - [export INSTALL_HOST_NAME="compute-$RANDOM", Generate machine name]
+#  - [sudo scutil --set ComputerName "$INSTALL_HOST_NAME", Setting ComputerName]
+#  - [sudo scutil --set LocalHostName "$INSTALL_HOST_NAME", Setting LocalHostName]
+#  - [sudo scutil --set HostName "$INSTALL_HOST_NAME", Setting HostName]
+#  - [unset INSTALL_HOST_NAME, Clean up variable]
 
 # Powerline Font Installation
 - shell:
