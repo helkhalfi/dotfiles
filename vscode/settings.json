@@ -14,6 +14,6 @@
   },
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
-  "window.zoomLevel": 1,
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
+  "window.zoomLevel": 1
 }
